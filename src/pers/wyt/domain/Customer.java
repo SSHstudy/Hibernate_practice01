@@ -17,6 +17,14 @@ public class Customer {
 	private String cust_level;
 	private String cust_linkman;
 	private String cust_phone;
+	
+	@Override
+	public String toString() {
+		return "Customer [cust_id=" + cust_id + ", cust_name=" + cust_name + ", cust_user_id=" + cust_user_id
+				+ ", cust_create_id=" + cust_create_id + ", cust_source=" + cust_source + ", cust_industry="
+				+ cust_industry + ", cust_level=" + cust_level + ", cust_linkman=" + cust_linkman + ", cust_phone="
+				+ cust_phone + ", cust_mobile=" + cust_mobile + "]";
+	}
 	private String cust_mobile;
 	
 	public String getCust_mobile() {
