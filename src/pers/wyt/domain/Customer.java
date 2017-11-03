@@ -6,6 +6,10 @@ package pers.wyt.domain;
  *
  */
 public class Customer {
+	/**
+	 * 一个JavaBean加上它的映射配置文件，可以称为持久化类
+	 * JavaBean+xxx.cfg.xml
+	 */
 
 	//使用包装类，默认值Null
 	private Long cust_id;

@@ -14,6 +14,32 @@ import pers.wyt.utils.HibernateUtils;
 
 public class Demo1 {
 	
+	/**
+	 * 测试保存
+	 */
+	@Test
+	public void testSave3() {
+		Session session = null;
+		Transaction tr = null;
+		try {
+			//获取Session
+			session = HibernateUtils.getSession();
+			tr = session.beginTransaction();
+			Customer c = new Customer();
+			c.setCust_name("abc");
+			session.save(c);
+			tr.commit();
+		}catch(Exception e) {
+			//回滚事务
+			tr.rollback();
+			e.printStackTrace();
+		}finally {
+			//释放资源
+			session.close();
+		}
+		
+	}
+	
 	@Test
 	public void testQuery() {
 		
